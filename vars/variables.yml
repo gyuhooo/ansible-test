@@ -1,0 +1,22 @@
+---
+# nginx
+virtual_server_name: example.com #nginx指定するServername
+virtual_root_path: "{{git_repo_dest}}/public" #nginxで指定するrootディレクトリ
+# db
+db_name: ansible_test #作成するDBの名前
+db_user: root #作成するdbのユーザー名
+db_password: root #作成するdbパスワード
+#git
+git_repo_url: https://github.com/gyuhooo/ansible-test.git #clone元repositoryのURL
+git_repo_dest: /www/test #どこにgit cloneしたフォルダを配置するか指定
+git_branch_name: master # cloneしてくるブランチ指定
+#Laravel .env
+MAIL_DRIVER: sendmail
+MAIL_HOST: locahost
+MAIL_PORT: 25
+MAIL_USERNAME: null
+MAIL_PASSWORD: null
+MAIL_FROM_ADDRESS: test@test.com
+MAIL_FROM_NAME: test@test.com
+#SSL(let's encrypt) #let's encryptで有効期限を知らせるメール通知先
+ssl_email: test@test.com

@@ -1,0 +1,10 @@
+[localhost]
+127.0.0.1 ansible_connection=local
+
+[aws] #ここに記載されたIPに対して接続します。複数指定することも可能です。
+111.111.111.111
+111.111.111.111
+
+[aws:vars] #[aws]で使う変数を定義しています。
+ansible_user=ec2-user #サーバ接続するユーザー
+ansible_ssh_private_key_file=/path/to/example.pem #サーバに接続するためのpemキーを指定

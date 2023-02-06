@@ -1,0 +1,14 @@
+---
+- hosts: aws #hostsファイルに記述したホストを指定します。
+  user: ec2-user #接続ユーザ
+  become: yes # root権限でコマンド実行
+  vars_files: #変数ファイル指定。後ほど作成します。
+    - ./vars/variables.yml
+  roles: #rolesディレクトリに今まで作ったファイルを読み込んでいます。
+    - common
+    - php
+    - mysql
+    - composer
+    - git_clone
+    - nginx
+    - letsencrypt
