@@ -68,11 +68,11 @@
       state: present
       encoding: utf8mb4
   - name: create user
-     mysql_user:
-       name: vagrant
-       password: vagrant
-       priv: '*.*:ALL,GRANT'
-       state: present
+    mysql_user:
+      name: lalavel
+      password: lalavel
+      priv: '*.*:ALL,GRANT'
+      state: present
   - name: restart mysqld
     service:
       name: mysqld
