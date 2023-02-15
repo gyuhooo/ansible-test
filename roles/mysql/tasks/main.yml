@@ -10,10 +10,10 @@
     shell: yum-config-manager --disable mysql80-community
   - name: enable mysql57-community-server
     shell: yum-config-manager --enable mysql57-community
-  - name: install mysql-community-server
+  - name: install mysql
     yum:
       state: present
-      name: ['mysql-community-server','MySQL-python']
+      name: ['mysql-server','mysql-client','python3-mysqldb']
   - name: running and enabled mysqld
     service:
       name: mysqld
