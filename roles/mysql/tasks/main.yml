@@ -6,6 +6,8 @@
       name: mariadb-libs
   - name: install mysql repository
     shell: rpm -ivh http://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+  - name: import GPG Key
+    shell: rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022
   - name: disable mysql80-community-server
     shell: yum-config-manager --disable mysql80-community
   - name: enable mysql57-community-server
