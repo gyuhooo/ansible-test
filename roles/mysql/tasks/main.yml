@@ -13,7 +13,7 @@
   - name: install mysql
     yum:
       state: present
-      name: ['mysql-server','mysql-client','python3-mysqldb']
+      name: ['mysql-community-server']
   - name: running and enabled mysqld
     service:
       name: mysqld
