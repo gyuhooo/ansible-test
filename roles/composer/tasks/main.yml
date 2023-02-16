@@ -14,7 +14,7 @@
   - name: install composer
     shell: export HOME=/root && export COMPOSER_HOME=/root && php /tmp/composer-setup.php
   - name: rename composer.phar to composer
-    shell: mv /tmp/composer.phar /usr/local/bin/composer
+    shell: mv /root/ansible-test/composer.phar /usr/local/bin/composer
   - name: make composer executable
     file:
       path: /usr/local/bin/composer
