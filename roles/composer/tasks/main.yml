@@ -12,7 +12,7 @@
   - name: set composer home
     shell: export COMPOSER_HOME=/root
   - name: install composer
-    shell: php composer-setup.php --install-dir=/usr/local/bin
+    shell: php composer-setup.php
   - option_settings:
     - namespace: aws:elasticbeanstalk:application:environment
       option_name: COMPOSER_HOME
@@ -21,7 +21,7 @@
       option_name: HOME
       value: /root
   - name: rename composer.phar to composer
-    shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer
+    shell: mv /tmp/composer.phar /usr/local/bin/composer
   - name: make composer executable
     file:
       path: /usr/local/bin/composer
