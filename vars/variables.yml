@@ -7,7 +7,7 @@ db_name: ansible_test #作成するDBの名前
 db_user: root #作成するdbのユーザー名
 db_password: root #作成するdbパスワード
 #git
-git_repo_url: https://github.com/gyuhooo/ansible-test.git #clone元repositoryのURL
+git_repo_url: https://github.com/KennethMathari/Laravel-Based-website-template #clone元repositoryのURL
 git_repo_dest: /www/test #どこにgit cloneしたフォルダを配置するか指定
 git_branch_name: master # cloneしてくるブランチ指定
 #Laravel .env
