@@ -9,6 +9,8 @@
       dest: /tmp/composer-setup.php
   - name: create composer home
     shell: mkdir /usr/local/bin/composer
+  - name: set home
+    shell: export HOME="/root"
   - name: set composer home
     shell: export COMPOSER_HOME="/usr/local/bin/composer"
   - name: install composer
