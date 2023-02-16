@@ -7,8 +7,12 @@
     get_url:
       url: https://getcomposer.org/installer
       dest: /tmp/composer-setup.php
+  - name: set home
+    shell: export HOME=/root
+  - name: set composer home
+    shell: export COMPOSER_HOME=/root
   - name: install composer
-    shell: export HOME=/root && export COMPOSER_HOME=/root && chdir=/tmp php composer-setup.php --install-dir=/usr/local/bin
+    shell: chdir=/tmp php composer-setup.php --install-dir=/usr/local/bin
   - option_settings:
     - namespace: aws:elasticbeanstalk:application:environment
       option_name: COMPOSER_HOME
