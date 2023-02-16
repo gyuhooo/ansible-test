@@ -7,12 +7,8 @@
     get_url:
       url: https://getcomposer.org/installer
       dest: /tmp/composer-setup.php
-  - name: create composer home
-    shell: mkdir /usr/local/bin/composer
   - name: set home
     shell: export HOME="/root"
-  - name: set composer home
-    shell: export COMPOSER_HOME="/usr/local/bin/composer"
   - name: install composer
     shell: chdir=/tmp php composer-setup.php
   - name: rename composer.phar to composer
