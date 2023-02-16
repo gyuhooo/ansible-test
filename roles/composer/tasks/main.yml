@@ -9,6 +9,13 @@
       dest: /tmp/composer-setup.php
   - name: install composer
     shell: export HOME=/root && export COMPOSER_HOME=/root && chdir=/tmp php composer-setup.php
+  - option_settings:
+    - namespace: aws:elasticbeanstalk:application:environment
+      option_name: COMPOSER_HOME
+      value: /root
+    - namespace: aws:elasticbeanstalk:application:environment
+      option_name: HOME
+      value: /root
   - name: rename composer.phar to composer
     shell: mv /usr/local/bin/composer.phar /usr/local/bin/composer
   - name: make composer executable
@@ -18,3 +25,4 @@
       state: file
   when: not composer_bin.stat.exists
   tags: composer
+
