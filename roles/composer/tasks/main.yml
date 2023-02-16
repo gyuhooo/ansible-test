@@ -12,7 +12,7 @@
   - name: set composer home
     shell: export COMPOSER_HOME=/root
   - name: install composer
-    shell: php composer-setup.php
+    shell: php /tmp/composer-setup.php
   - name: rename composer.phar to composer
     shell: mv /tmp/composer.phar /usr/local/bin/composer
   - name: make composer executable
